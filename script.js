@@ -34,6 +34,8 @@ const translations = {
     "config.subtitle":
       "Get up and running in seconds. The extension guides you through the setup process.",
     "config.step1.title": "1. Generate Token",
+    "config.step1.desc":
+      'Go to <a href="https://github.com/settings/tokens/new?scopes=repo,read:user" target="_blank" class="text-primary hover:underline">GitHub Developer Settings</a> and generate a new "Classic" token.',
     "config.step2.title": "2. Select Scopes",
     "config.step2.desc":
       "Make sure to select the repo and read:user scopes to allow the extension to read PRs.",
@@ -76,6 +78,8 @@ const translations = {
     "config.subtitle":
       "Saniyeler içinde kullanmaya başlayın. Eklenti kurulum sürecinde size rehberlik eder.",
     "config.step1.title": "1. Token Oluşturun",
+    "config.step1.desc":
+      '<a href="https://github.com/settings/tokens/new?scopes=repo,read:user" target="_blank" class="text-primary hover:underline">GitHub Developer Settings</a> sayfasına gidin ve yeni bir "Classic" token oluşturun.',
     "config.step2.title": "2. İzinleri Seçin",
     "config.step2.desc":
       "Eklentinin PR'ları okuyabilmesi için repo ve read:user izinlerini seçtiğinizden emin olun.",
@@ -138,7 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll("[data-i18n]").forEach((element) => {
       const key = element.getAttribute("data-i18n");
       if (translations[lang][key]) {
-        element.textContent = translations[lang][key];
+        element.innerHTML = translations[lang][key];
       }
     });
   }
