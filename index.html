@@ -221,7 +221,7 @@
               </div>
 
               <!-- Code Content -->
-              <div class="ml-12 text-[#d4d4d4] font-mono text-sm">
+              <div class="ml-12 text-[#d4d4d4] font-mono text-xs sm:text-sm">
                 <div class="code-line">
                   <span class="text-[#569cd6]">export</span>
                   <span class="text-[#569cd6]">default</span> {
@@ -288,7 +288,7 @@
               <!-- Conflict Alert Popup -->
               <div
                 id="conflict-popup"
-                class="absolute bottom-6 right-6 bg-[#252526] border border-[#454545] shadow-2xl rounded-md p-3 w-[400px] transform translate-x-[120%] transition-all duration-500 flex flex-col gap-2 z-10 font-sans"
+                class="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 bg-[#252526] border border-[#454545] shadow-2xl rounded-md p-3 w-[calc(100%-2rem)] sm:w-[400px] transform translate-x-[120%] transition-all duration-500 flex flex-col gap-2 z-10 font-sans"
               >
                 <!-- Header Row -->
                 <div class="flex items-start gap-3">
@@ -312,17 +312,19 @@
 
                 <!-- Footer Row -->
                 <div class="flex items-center justify-between mt-1 pl-7">
-                  <div class="text-[11px] text-gray-400 opacity-80">
+                  <div
+                    class="text-[11px] text-gray-400 opacity-80 hidden sm:block"
+                  >
                     Source: Real-Time Conflict Predictor
                   </div>
-                  <div class="flex gap-2">
+                  <div class="flex gap-2 flex-shrink-0 ml-auto sm:ml-0">
                     <button
-                      class="bg-[#3c3c3c] hover:bg-[#4c4c4c] text-white text-[11px] px-3 py-1 rounded-sm transition-colors"
+                      class="bg-[#3c3c3c] hover:bg-[#4c4c4c] text-white text-[11px] px-2 py-0.5 sm:px-3 sm:py-1 rounded-sm transition-colors whitespace-nowrap"
                     >
                       OK
                     </button>
                     <button
-                      class="bg-[#0e639c] hover:bg-[#1177bb] text-white text-[11px] px-3 py-1 rounded-sm transition-colors font-medium"
+                      class="bg-[#0e639c] hover:bg-[#1177bb] text-white text-[11px] px-2 py-0.5 sm:px-3 sm:py-1 rounded-sm transition-colors font-medium whitespace-nowrap"
                     >
                       Show Details
                     </button>
@@ -558,13 +560,13 @@
               <!-- Tabs -->
               <div class="flex items-end gap-1 pt-2">
                 <div
-                  class="flex items-center gap-2 px-3 py-1.5 bg-[#2d2d2d] text-[#969696] text-xs rounded-t-md border-t border-l border-r border-transparent cursor-pointer hover:bg-[#2d2d2d]"
+                  class="hidden sm:flex items-center gap-2 px-3 py-1.5 bg-[#2d2d2d] text-[#969696] text-xs rounded-t-md border-t border-l border-r border-transparent cursor-pointer hover:bg-[#2d2d2d]"
                 >
                   <i class="fab fa-vuejs text-[#42b883]"></i>
                   <span>HomeView.vue</span>
                 </div>
                 <div
-                  class="flex items-center gap-2 px-3 py-1.5 bg-[#1e1e1e] text-white text-xs rounded-t-md border-t border-l border-r border-[#1e1e1e] relative z-10"
+                  class="flex items-center gap-2 px-3 py-1.5 bg-[#1e1e1e] text-white text-xs rounded-t-md border-t border-l border-r border-[#1e1e1e] relative z-10 whitespace-nowrap"
                 >
                   <i class="fas fa-exclamation-triangle text-yellow-500"></i>
                   <span>Conflict Risk: HomeView.vue</span>
@@ -583,7 +585,7 @@
 
             <!-- Panel Content -->
             <div
-              class="p-6 h-[400px] overflow-y-auto bg-[#1e1e1e] text-[#cccccc] scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-transparent"
+              class="p-4 sm:p-6 h-[400px] overflow-y-auto bg-[#1e1e1e] text-[#cccccc] scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-transparent"
             >
               <!-- Header -->
               <div
@@ -840,7 +842,7 @@
             >
               <!-- Settings Header -->
               <div
-                class="h-10 flex items-center px-8 border-b border-[#2d2d2d]"
+                class="h-10 flex items-center px-4 sm:px-8 border-b border-[#2d2d2d]"
               >
                 <span
                   class="text-white text-xs font-bold uppercase tracking-wider"
@@ -857,7 +859,7 @@
                 </div>
               </div>
               <!-- Setting Item -->
-              <div class="p-8">
+              <div class="p-4 sm:p-8">
                 <div class="flex items-center gap-2 mb-2">
                   <div class="w-0.5 h-4 bg-[#007acc]"></div>
                   <span class="text-white text-xs font-bold"
